@@ -18,5 +18,5 @@ methods for \code{model} (e.g. \link[stats]{plot.lm})
 }
 \examples{
 com_out <- comfam(iris[,1:2], iris$Species)
-plot(com_out)
+plot(com_out, "Sepal.Length")
 }

@@ -433,7 +433,7 @@ predict.comfam <- function(object, newdata, newbat, newcovar = NULL,
 #'
 #' @examples
 #' com_out <- comfam(iris[,1:2], iris$Species)
-#' plot(com_out)
+#' plot(com_out, "Sepal.Length")
 plot.comfam <- function(object, feature) {
   plot(object$fits[[feature]])
 }
