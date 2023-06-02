@@ -16,7 +16,9 @@ Imports:
     lme4, 
     mgcv, 
     quantreg,
-    svDialogs
+    longCombat,
+    neuroCombat_Rpackage,
+    CovBat_Harmonization/R
 Remotes: jcbeer/longCombat, 
         jfortin1/neuroCombat_Rpackage, 
         andy1764/CovBat_Harmonization/R
