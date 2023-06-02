@@ -18,7 +18,7 @@ Imports:
     quantreg,
     longCombat,
     neuroCombat_Rpackage,
-    CovBat_Harmonization/R
+    R
 Remotes: jcbeer/longCombat, 
         jfortin1/neuroCombat_Rpackage, 
         andy1764/CovBat_Harmonization/R
