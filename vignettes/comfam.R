@@ -48,7 +48,7 @@ cgl <- comfam(data, bat, covar, gamlss, y ~ x1 + x2,
               control = gamlss.control(trace = FALSE))
 
 ## -----------------------------------------------------------------------------
-# devtools::install_github("jcbeer/longCombat")
+##devtools::install_github("jcbeer/longCombat")
 suppressPackageStartupMessages({
   library(longCombat)
   library(lme4)
