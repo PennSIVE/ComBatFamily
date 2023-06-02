@@ -29,6 +29,12 @@
 #' \item{batch.info}{Batch information, including reference batch if specified}
 #' \item{fits}{List of model fits from regression step, outputs of `model` for each feature}
 #' \item{estimates}{List of estimates from standardization and batch effect correction}
+#' 
+#' @importFrom mgcv gam
+#' @importFrom gamlss gamlss
+#' @importFrom quantreg rq
+#' @importFrom lme4 lmer
+#' 
 #' @export
 #'
 #' @seealso

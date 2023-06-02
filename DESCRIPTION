@@ -11,3 +11,11 @@ VignetteBuilder: knitr
 Suggests: knitr, rmarkdown
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    gamlss, 
+    lme4, 
+    mgcv, 
+    quantreg
+Remotes: github::jcbeer/longCombat, github::jfortin1/neuroCombat_Rpackage, github::andy1764/CovBat_Harmonization/R
+
+
