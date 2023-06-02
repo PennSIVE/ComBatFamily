@@ -4,13 +4,15 @@
 \alias{plot.comfam}
 \title{Plot Diagnostics for \code{comfam}}
 \usage{
-\method{plot}{comfam}(object, feature)
+\method{plot}{comfam}(x, feature, ...)
 }
 \arguments{
-\item{object}{Object of class \code{comfam}, typically output of
+\item{x}{Object of class \code{comfam}, typically output of
 \link[ComBatFamily]{comfam}}
 
 \item{feature}{Feature to diagnose, either index or variable name}
+
+\item{...}{Additional arguments to \code{plot}}
 }
 \description{
 Diagnostic plots for original model fits in \code{comfam}, leverages S3 plot

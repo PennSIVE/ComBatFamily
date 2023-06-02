@@ -45,6 +45,11 @@
 #' @importFrom gamlss gamlss
 #' @importFrom quantreg rq
 #' @importFrom lme4 lmer
+#' @importFrom methods hasArg
+#' @importFrom stats family lm median model.matrix prcomp predict qnorm update var
+#' @importFrom CovBat covbat
+#' @importFrom neuroCombat neuroCombat
+#' @importFrom longCombat longCombat
 #' 
 #' @export
 #'

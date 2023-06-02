@@ -34,6 +34,11 @@
 #' @importFrom gamlss gamlss
 #' @importFrom quantreg rq
 #' @importFrom lme4 lmer
+#' @importFrom methods hasArg
+#' @importFrom stats family lm median model.matrix prcomp predict qnorm update var
+#' @importFrom CovBat covbat
+#' @importFrom neuroCombat neuroCombat
+#' @importFrom longCombat longCombat
 #' 
 #' @export
 #'
@@ -246,6 +251,7 @@ comfam <- function(data, bat, covar = NULL, model = lm, formula = NULL,
 #' @param robust.LS If \code{TRUE}, uses robust location and scale estimators
 #'   for new batch effect estimates Currently uses median and biweight
 #'   midvariance
+#'@param ... Additional arguments to `predict`
 #'
 #' @return `predict.comfam` returns a list containing the following components:
 #' \item{dat.combat}{New harmonized data as a matrix with same dimensions as `newdata`}
@@ -264,7 +270,7 @@ comfam <- function(data, bat, covar = NULL, model = lm, formula = NULL,
 #' in_pred <- predict(com_out, iris[1:25,1:2], iris$Species[1:25])
 #' max(in_pred$dat.combat - com_out$dat.combat[1:25,])
 predict.comfam <- function(object, newdata, newbat, newcovar = NULL,
-                           robust.LS = FALSE, eb = TRUE) {
+                           robust.LS = FALSE, eb = TRUE, ...) {
   data <- newdata
   n <- nrow(data)
   p <- ncol(data)
@@ -430,9 +436,10 @@ predict.comfam <- function(object, newdata, newbat, newcovar = NULL,
 #' Diagnostic plots for original model fits in `comfam`, leverages S3 plot
 #' methods for `model` (e.g. \link[stats]{plot.lm})
 #'
-#' @param object Object of class `comfam`, typically output of
+#' @param x Object of class `comfam`, typically output of
 #'   \link[ComBatFamily]{comfam}
 #' @param feature Feature to diagnose, either index or variable name
+#' @param ... Additional arguments to `plot`
 #'
 #' @return
 #' @export
@@ -440,8 +447,8 @@ predict.comfam <- function(object, newdata, newbat, newcovar = NULL,
 #' @examples
 #' com_out <- comfam(iris[,1:2], iris$Species)
 #' plot(com_out, "Sepal.Length")
-plot.comfam <- function(object, feature) {
-  plot(object$fits[[feature]])
+plot.comfam <- function(x, feature, ...) {
+  plot(x$fits[[feature]])
 }
 
 .biweight_midvar <- function(data, center=NULL, norm.unbiased = TRUE) {
@@ -462,3 +469,5 @@ plot.comfam <- function(object, feature) {
 
   n * num/dem
 }
+
+utils::globalVariables(c("sigma.formula"))
