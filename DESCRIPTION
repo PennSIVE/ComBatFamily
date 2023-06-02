@@ -17,7 +17,7 @@ Imports:
     mgcv, 
     quantreg,
     longCombat,
-    neuroCombat_Rpackage,
+    neuroCombat,
     R
 Remotes: jcbeer/longCombat, 
         jfortin1/neuroCombat_Rpackage, 
