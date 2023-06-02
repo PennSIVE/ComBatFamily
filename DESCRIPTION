@@ -16,6 +16,9 @@ Imports:
     lme4, 
     mgcv, 
     quantreg
-Remotes: github::jcbeer/longCombat, github::jfortin1/neuroCombat_Rpackage, github::andy1764/CovBat_Harmonization/R
+Remotes: 
+    jcbeer/longCombat, 
+    jfortin1/neuroCombat_Rpackage, 
+    andy1764/CovBat_Harmonization/R
 
 
